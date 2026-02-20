@@ -1,0 +1,5 @@
+Flash os
+mettre les fichiers du dossier en place,
+mettre la date à jour                           sudo date -s "26 JAN 2026 16:45:00"
+mettre en place le contournement de proxy dans le /etc/apt/apt.conf.d(voir 95proxy)
+lancé l'installation, bash set-up.sh (1)
