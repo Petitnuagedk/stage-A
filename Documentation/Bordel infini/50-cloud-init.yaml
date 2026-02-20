@@ -1,0 +1,21 @@
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+users:
+  - name: pi
+    groups: sudo
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8w/11OhldxnxHyHLGuvtzSc5XVVPToKwkfNAjjWXbPmG1m2FHmHgRQxsA3xvjD5v3Dq1ZznLq068i+T+Z3fGGxKbbWJei4apQWvVoUSWpaDJmK/+QFeLuBW68ky4xzh9bn0W5FOdt0dWO4iYg4bElXhBlPfEayr+70g3koDlBg6t3i3UvCmmj0fGEkN19+j4jXmZCro5b3uVdU0g8f6p1qVOwfRpblxOJbcFBWH+ZwwYFRNv1Ot4LdOC0rSGjlykXGxbTYMSE3ignCsgvUDmDSmvl192irkRjB2oXK2JBRf/6SiY8yVP6puGmQFNs1Xvrs38d59ZWWSwIrxSTYnyBcQWqSickAct5Opb1ODTgPDyLGNscWykzippd3+xiKG1EHV+7AmhVw7wInWTXIcr72PLYxEv73PvIm6kRMjD5ffeKTklnF2YIk7YLJfYWF9R0zFZwOlwTER8nRtoLfvpzZi4bEMVgQ24qDilRR4Sqxy0xLseuIjfz56v5bDxsmOU= mfourtane@wdtis708h
+network:
+ version: 2
+ renderer: networkd
+ wifis:
+  wlan0:
+    dhcp4: true
+    dhcp6: false
+    access-points:
+      "TestePi":
+        password: "12345678"
